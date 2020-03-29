@@ -1,0 +1,30 @@
+﻿<Window x:Class="Simulation.SimulationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simulation"
+        mc:Ignorable="d"
+        Title="SimulationWindow" Height="600" Width="600" Closing="Window_Exit">
+    <Grid Background="LemonChiffon">
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Left" 
+              Height="20" Width="600" Background="AliceBlue" Foreground="blue">
+            <MenuItem Header="File">
+                <MenuItem Header="Save" Background="AliceBlue" Click="MenuSave_Click"/>
+                <MenuItem Header="Load" Background="AliceBlue" Click="MenuLoad_Click"/>
+                <MenuItem Header="Exit" Background="AliceBlue" Click="MenuExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Simulation">
+                <MenuItem Header="Start" Background="AliceBlue" Click="MenuStart_Click"/>
+                <MenuItem Header="Pause" Background="AliceBlue" Click="MenuPause_Click"/>
+            </MenuItem>
+            
+        </Menu>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid Background="#000" Width="454" Height="454" Margin="0 0 0 5">
+                <!-- Simulation board -->
+                <Canvas x:Name="Board" Background="#fff" Width="450" Height="450"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
