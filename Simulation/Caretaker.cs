@@ -1,9 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Simulation
 {
@@ -14,9 +10,12 @@ namespace Simulation
 
         public Caretaker()
         {
-            this.path = @"C:\Users\danwo\Desktop\Studia\Semestr_5\TO\particle_move\Simulation\Simulation\saves\sim_save.txt";
-            
-                this.file = File.CreateText(path); 
+            string current_path = Directory.GetCurrentDirectory();
+            string saves_dir = System.IO.Path.Combine(current_path, "../../saves");
+            Directory.CreateDirectory("../../saves");
+
+            this.path = System.IO.Path.Combine(saves_dir, "sim.txt");;            
+            this.file = File.CreateText(path); 
         }
 
         public void SaveToFile(Memento mem)

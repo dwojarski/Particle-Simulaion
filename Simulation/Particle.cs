@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -12,8 +7,8 @@ namespace Simulation
     class Particle
     {
         private double radius;
-        private Vector2d position; //zamienic na Vector2d
-        private Vector2d speed; //zamienic na Vector2d
+        private Vector2d position; 
+        private Vector2d speed; 
 
         public Particle(double radius, Vector2d position, Vector2d speed)
         {
@@ -100,7 +95,6 @@ namespace Simulation
             {
                 Height = 2 * this.radius,
                 Width = 2 * this.radius,
-                //Fill = Brushes.Blue,
                 Stroke = Brushes.Black
             };
 

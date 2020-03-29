@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 
 namespace Simulation
@@ -74,7 +71,6 @@ namespace Simulation
 
         private void Move()
         {
-            // Move particles
             foreach (Particle p in particles)
             {
                 p.Move();
